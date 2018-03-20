@@ -24,3 +24,13 @@ def show_nodes(node):
         node = node.next
 
 show_nodes(n1)
+
+
+
+x = -2
+while x < 30:
+    if -2<x<10 or 15<x<30:
+        if 8<x<18:
+            if not 12<x<20:
+                print(x)
+    x += 1

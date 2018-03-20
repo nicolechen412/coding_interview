@@ -57,7 +57,7 @@ show_nodes(large_list)
 head_small.next = large_list.next
 show_nodes(small_list.next)
 
-思路有问题
+# 思路有问题
 
 # head = Node(-1)
 # head.next = n1
