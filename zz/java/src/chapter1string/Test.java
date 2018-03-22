@@ -1,7 +1,6 @@
-package chapter1;
+package chapter1string;
 
 import static java.lang.System.out;
-import java.util.Arrays;
 
 /**
  * @author: Bruce Zhao
