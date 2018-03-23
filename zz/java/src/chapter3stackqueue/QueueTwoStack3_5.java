@@ -17,23 +17,20 @@ public class QueueTwoStack3_5 {
         if(stack1.isEmpty() && stack2.isEmpty()){ //都是空的
             System.out.print("Empty Queue : ");
             return value;
-        }else if(stack2 != null){ //stack2非空，直接可以输出
+        }else if(!stack2.isEmpty()){ //stack2非空，直接可以输出
             value = stack2.pop();
-        }else if(stack2 == null && !stack1.isEmpty()){ //新push到stack1的，
+        }else if(stack2.isEmpty() && !stack1.isEmpty()){ //新push到stack1的，
             while(!stack1.isEmpty()){
                 value = stack1.pop();
                 stack2.push(value);
             }
+            value = stack2.pop();
         }
         return value;
     }
-
     public static void main(String[] args){
         enque(1);
         enque(1);
-        enque(1);
-        System.out.println(deque());
-        System.out.println(deque());
         System.out.println(deque());
         System.out.println(deque());
         enque(2);
@@ -41,6 +38,9 @@ public class QueueTwoStack3_5 {
         System.out.println(deque());
         enque(2);
         enque(2);
+        System.out.println(deque());
+        System.out.println(deque());
+        System.out.println(deque());
     }
 
 }

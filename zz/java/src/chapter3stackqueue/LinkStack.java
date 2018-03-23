@@ -9,10 +9,10 @@ import chapter2linklist.LinkList;
  * @date: 2018/3/22 19:21
  */
 public class LinkStack {
-    public static LinkList stack;
+    public LinkList stack;
     public static int min = 10000;
 
-    public static void push(int value){
+    public void push(int value){
         if(value < min){
             min = value;
         }
@@ -21,7 +21,7 @@ public class LinkStack {
         stack = node;
     }
 
-    public static int pop(){
+    public int pop(){
         if(stack == null){
             System.out.println("Empty stack");
             return -1;
@@ -31,7 +31,7 @@ public class LinkStack {
         return value;
     }
 
-    public static boolean isEmpty(){
+    public boolean isEmpty(){
         return stack == null ? true : false;
     }
 
@@ -39,12 +39,14 @@ public class LinkStack {
         return min;
     }
     public static void main(String[] args){
-        push(1);
-        push(2);
-//        out.println(pop());
-//        out.println(pop());
-//        out.println(pop());
-        push(3);
+        LinkStack linkStack = new LinkStack();
+
+        linkStack.push(1);
+        linkStack.push(2);
+        out.println(linkStack.pop());
+        out.println(linkStack.pop());
+        out.println(linkStack.pop());
+        linkStack.push(3);
 //        out.println(pop());
         out.println(min());
     }
