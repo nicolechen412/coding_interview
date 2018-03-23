@@ -31,6 +31,10 @@ public class LinkStack {
         return value;
     }
 
+    public static boolean isEmpty(){
+        return stack == null ? true : false;
+    }
+
     public static int min(){
         return min;
     }
