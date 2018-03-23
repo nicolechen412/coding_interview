@@ -54,11 +54,11 @@ public class Queue {
         return true;
     }
 
-    public int dequeue(){
+    public Node dequeue(){
         if(first == null){
             throw new RuntimeException("空队列！");
         }else {
-            int item = first.data;
+            Node item = first;
             first = first.next;
             size--;
             return item;

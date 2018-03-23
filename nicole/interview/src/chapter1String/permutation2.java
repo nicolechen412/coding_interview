@@ -5,6 +5,7 @@ import java.util.Arrays;
 /**
  * @author NicoleChen
  * @date 2018/3/20 11:05
+ * 全排列问题
  */
 public class permutation2 {
     public static void main(String[] args) {
@@ -34,10 +35,13 @@ public class permutation2 {
         }
     }
 
-    private static boolean isSwap(char[] chars, int start, int i) {
-        for(int j = start; j<i; j++){
-
+    private static boolean isSwap(char[] chars, int start, int end) {
+        for(int j = start; j<end; j++){
+            if(chars[j] == chars[end]){
+                return true;
+            }
         }
+        return false;
 
     }
 

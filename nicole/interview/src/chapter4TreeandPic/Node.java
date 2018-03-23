@@ -1,29 +1,28 @@
 package chapter4TreeandPic;
 
+import chapter3StackAndQueue.Queue;
+
 /**
  * @author NicoleChen
  * @date 2017/12/20 21:45
  * java:linkedlist
  */
 public class Node {
-    Node next = null;
+
+    int parent;  //保存父节点的位置
     int data;
     boolean visited;
+
+
     public Node() {
     }
 
-    public Node(int d){
+    public Node(int d,int parent){
         this.data = d;
-        this.next = null;
+        this.parent = parent;
     }
 
-    public Node getNext() {
-        return next;
-    }
 
-    public void setNext(Node next) {
-        this.next = next;
-    }
 
     public int getData() {
         return data;
@@ -33,44 +32,13 @@ public class Node {
         this.data = data;
     }
 
-    public static void showList(Node head){
-        while(head != null){
-            System.out.print(head.data + " ");
-            head = head.next;
-        }
-        System.out.println();
-    }
-    void appendToTail(int d){
-        Node end = new Node(d);
-        Node n = this;
-        while(n.next != null){
-            n = n.next;
-        }
-        n.next = end;
+    public int getParent() {
+        return parent;
     }
 
-    Node deleteNode(Node head, int d){
-        Node n = head;
-        if(n.data == d){
-            return head.next;
-        }
-
-        while(n.next != null){
-            if (n.next.data == d){
-                n.next = n.next.next;
-                return head;
-            }
-            n = n.next;
-        }
-        return null;
+    public void setParent(int parent) {
+        this.parent = parent;
     }
 
 
-    @Override
-    public String toString() {
-        return "Node{" +
-                "next=" + next +
-                ", data=" + data +
-                '}';
-    }
 }
