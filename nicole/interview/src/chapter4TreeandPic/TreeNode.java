@@ -1,5 +1,11 @@
 package chapter4TreeandPic;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.logging.Level;
+
 /**
  * @author NicoleChen
  * @date 2018/3/23 15:09
@@ -27,4 +33,24 @@ public class TreeNode {
     public void setRight(TreeNode right) {
         this.right = right;
     }
+
+    public void showList(TreeNode root){
+        Queue<TreeNode> q = new LinkedBlockingQueue();
+        q.add(root);
+
+        while (!q.isEmpty()){
+            TreeNode tmp = q.poll();
+            System.out.println(tmp.val);
+
+            if(tmp.left != null){
+                q.add(tmp.left);
+            }
+            if(tmp.right != null){
+                q.add(tmp.right);
+            }
+        }
+    }
+
+
+
 }
