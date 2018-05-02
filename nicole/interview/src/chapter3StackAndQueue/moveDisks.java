@@ -24,10 +24,10 @@ public class moveDisks {
 
 
  class Tower{
-    public Stack<Integer> disks;
+    public Stack disks;
     int index;
     public Tower(int d){
-        disks = new Stack<>();
+        disks = new Stack();
         index = d;
     }
 

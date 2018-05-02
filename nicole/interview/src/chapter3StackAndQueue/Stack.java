@@ -27,7 +27,7 @@ package chapter3StackAndQueue;
     }
 }*/
 
-public class Stack<I extends Number> {
+public class Stack {
 
     private Node top;
     private int size;

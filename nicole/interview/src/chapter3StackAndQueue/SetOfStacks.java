@@ -7,8 +7,8 @@ import java.util.ArrayList;
  * @date 2018/3/15 8:30
  */
 public class SetOfStacks {
-    ArrayList<Stack<Number>> stacks = new ArrayList<>();
-    Stack<Number> last;
+    ArrayList<Stack> stacks = new ArrayList<>();
+    Stack last;
     int size;
 
     public void push(int item){
@@ -16,7 +16,7 @@ public class SetOfStacks {
         if(!last.isEmpty() && !last.isfull()){
             last.push(item);
         }else{
-            Stack<Number> a = new Stack<Number>();
+            Stack a = new Stack();
             a.push(item);
             stacks.add(a);
         }
@@ -30,7 +30,7 @@ public class SetOfStacks {
         return item;
     }
 
-    public Stack<Number> getLastStack(){
+    public Stack getLastStack(){
         if(stacks != null){
             return stacks.get(stacks.size()-1);
         }else{

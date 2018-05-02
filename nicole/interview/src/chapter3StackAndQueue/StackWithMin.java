@@ -4,10 +4,10 @@ package chapter3StackAndQueue;
  * @author NicoleChen
  * @date 2018/3/14 9:17
  */
-public class StackWithMin extends Stack<Number> {
-    Stack<Number> s2;
+public class StackWithMin extends Stack {
+    Stack s2;
     public void StackWithMin(){
-        s2 = new Stack<Number>();
+        s2 = new Stack();
     }
 
     public int pop(){
