@@ -50,6 +50,7 @@ public class heapSort {
                 left = index*2 + 1;
                 System.out.println("2222max:" + max + " index:" + index + " left:" + left);
             }
+
             for(int x : arr){
                 System.out.print(x + " ");
             }

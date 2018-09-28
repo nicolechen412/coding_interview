@@ -6,6 +6,7 @@ package newCoder;
  * 通过荷兰国旗问题改进快排
  * 改进的地方:如果其中存在很多的重复数字，当选择该数字作为基准后，等于该数字的顺序已排好
  */
+
 public class NetherLand {
 
     public static int[] quickSort(int[] arr, int L, int R){
@@ -23,12 +24,13 @@ public class NetherLand {
             if(arr[L] < arr[R]){
                 swap(arr, ++less, L++);
             }else if(arr[L] > arr[R]){
-                swap(arr, --more, L);
+                swap(arr, L, --more);
             }else{
                 L++;
             }
         }
-        swap(arr, R, more);
+        swap(arr, R, more);          //以数组最后一个数为比较的基准，不改变它的位置便于比较
+        // ，直到该次基准比较结束
         return new int[]{less+1,more};
     }
     /*public static int[] NetherLand(int[] arr, int num){

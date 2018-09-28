@@ -35,7 +35,8 @@ public class Queue3 {
             throw new RuntimeException("队列已满");
         }else{
             data[last] = item;
-            last = (last+1) % maxSize;
+            //last = (last+1) % maxSize;
+            last = last == maxSize-1 ? 0 : last+1;
             size++;
             return true;
 
@@ -48,7 +49,8 @@ public class Queue3 {
         }else{
             int item = data[first];
             data[first] = item;
-            first = (first+1) % maxSize;
+            //first = (first+1) % maxSize;
+            first = first == maxSize-1 ? 0 : first+1;
             size--;
             return item;
 

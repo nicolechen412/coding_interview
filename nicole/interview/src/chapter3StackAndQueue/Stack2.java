@@ -23,7 +23,7 @@ public class Stack2 {
         }
     }
 
-    public boolean empty(){
+    public boolean empty() {
         return top == -1;
     }
 

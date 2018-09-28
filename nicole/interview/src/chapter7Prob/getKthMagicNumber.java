@@ -48,12 +48,13 @@ public class getKthMagicNumber {
     }
     public static long getKthMagicNumber2(long k){
         long start2 = System.nanoTime();
+        if(k < 0) return 0;
         long val = 0;
         LinkedList<Long> list3 = new LinkedList<>();
         LinkedList<Long> list5 = new LinkedList<>();
         LinkedList<Long> list7 = new LinkedList<>();
-        list3.add((long) 1);
-        for(long i = 0; i <= k; i++){
+        list3.add((long)1);
+        for(long i=0; i<=k; i++){
             long v3 = list3.size()>0 ? list3.peek() : Integer.MAX_VALUE;
             long v5 = list5.size()>0 ? list5.peek() : Integer.MAX_VALUE;
             long v7 = list7.size()>0 ? list7.peek() : Integer.MAX_VALUE;
@@ -70,6 +71,7 @@ public class getKthMagicNumber {
             }
             list7.add(7 * val);
         }
+
         long end2 = System.nanoTime();
         System.out.println("Time2 ：" + (end2 - start2));
         return val;
