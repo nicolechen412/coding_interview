@@ -29,7 +29,7 @@ public class NetherLand {
                 L++;
             }
         }
-        swap(arr, R, more);          //以数组最后一个数为比较的基准，不改变它的位置便于比较
+        swap(arr, R, more);          //以数组最后一个数arr[R]为比较的基准，不改变它的位置便于比较
         // ，直到该次基准比较结束
         return new int[]{less+1,more};
     }

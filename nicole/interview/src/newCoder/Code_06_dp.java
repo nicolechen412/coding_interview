@@ -33,7 +33,7 @@ public class Code_06_dp {
         }
         return dp;
     }
-    private static int minPathSum(int[][] m){
+    private static int minPathSum(int[][] m){    //矩阵最短路径
         if(m == null || m.length == 0|| m[0] == null || m[0].length == 0){
             return 0;
         }
@@ -56,7 +56,7 @@ public class Code_06_dp {
 
     }
 
-    private int[][]  LongestCommonSeq(String str1[], String str2[]){
+    private int[][]  LongestCommonSeq(String str1[], String str2[]){    //最长公共子序列
         int[][] dp = new int[str1.length][str2.length];
         dp[0][0] = str1[0] == str2[0] ? 1 : 0;
         for (int i = 0; i < str1.length; i++) {
@@ -74,7 +74,7 @@ public class Code_06_dp {
         return dp;
     }
 
-    private static int[][] LongestCommonChuan(String[] str1, String[] str2){
+    private static int[][] LongestCommonChuan(String[] str1, String[] str2){     //最长公共子串
         int[][] dp = new int[str1.length][str2.length];
 
         for (int i = 0; i < str1.length; i++) {
